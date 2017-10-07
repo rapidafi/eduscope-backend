@@ -14,7 +14,7 @@ select
 from up.koodistot
 where koodisto='oppilaitosnumero'
 and koodi in (select b.nimi from up.koodistot b where b.koodisto='virtakorkeakoulutunnus')
-and coalesce(loppupvm,'9999-9-9') > now()
+--and coalesce(loppupvm,'9999-9-9') > now()
 order by 1,2
 ;
 

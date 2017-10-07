@@ -30,7 +30,7 @@ if (isset($_SERVER['PATH_INFO'])) {
 }
 $input = json_decode(file_get_contents('php://input'),true);
 
-$sort = "id";
+$sort = "1";
 if (isset($_GET['sort'])) {
   $sort = preg_replace('/[^-+a-z0-9_]+/i','',$_GET['sort']); // nb! - and + chars
 }
