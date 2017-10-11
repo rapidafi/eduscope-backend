@@ -19,6 +19,7 @@ create table if not exists hei_bullet (
     id bigserial not null primary key,
     oppilaitos varchar(5) not null,
     nimi varchar(100) not null,
+    nimi_sv varchar(100) null,
     nimi_en varchar(100) null,
     vuosi varchar(4) not null,
     mittariryhma varchar(30) not null,
