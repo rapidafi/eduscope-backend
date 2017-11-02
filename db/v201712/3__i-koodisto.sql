@@ -17,4 +17,4 @@ and koodisto not in ('oppilaitosnumero','virtakorkeakoulutunnus') --todo: really
 order by 1,2
 ;
 
-select * from koodisto;
+--select * from koodisto;

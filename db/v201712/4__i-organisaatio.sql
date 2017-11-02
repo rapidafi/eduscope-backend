@@ -18,4 +18,4 @@ and koodi in (select b.nimi from up.koodistot b where b.koodisto='virtakorkeakou
 order by 1,2
 ;
 
-select * from organisaatio;
+--select * from organisaatio;
