@@ -30,10 +30,6 @@ if (isset($_SERVER['PATH_INFO'])) {
 }
 $input = json_decode(file_get_contents('php://input'),true);
 
-$dbschema = "";
-if (isset($_GET['version'])) {
-  $dbschema = $_GET['version'];
-}
 $sort = "1";
 if (isset($_GET['sort'])) {
   $sort = preg_replace('/[^-+a-z0-9_]+/i','',$_GET['sort']); // nb! - and + chars
@@ -65,10 +61,7 @@ try {
   die("Something went wrong while connecting to database: " . $e->getMessage() );
 }
 // oh hack: get schema name from this script filename: $dbschema = 'v201711';
-// => parameterized. should not be needed anymore!
-if ($dbschema=="") {
-  $dbschema = split(".php",split("_",basename(__FILE__),2)[1],2)[0];
-}
+$dbschema = split(".php",split("_",basename(__FILE__),2)[1],2)[0];
 
 // special case for listing datasets
 if (count($request)<=1 && (empty($request) || empty($request[0]))) {
