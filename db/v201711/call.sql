@@ -1,10 +1,4 @@
---\i 0__c-schema.sql
-DROP SCHEMA v201801 CASCADE;
-
-CREATE SCHEMA v201801;
-
-set search_path to v201801;
-
+\i 0__c-schema.sql
 \i 1__c-koodisto.sql
 \i 2__c-organisaatio.sql
 \i 3__i-koodisto.sql
