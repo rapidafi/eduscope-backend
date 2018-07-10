@@ -49,7 +49,7 @@ if ($offset<1) {
   $offset = 0;
 }
 
-$dbschema = 'v201802';
+$dbschema = 'v201808';
 if (isset($_GET['version'])) {
   if (is_numeric($_GET['version'])) {
     $dbschema = 'v'.strval($_GET['version']);
